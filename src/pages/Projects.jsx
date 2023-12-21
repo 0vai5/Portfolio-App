@@ -4,6 +4,7 @@ import { BarLoader } from "react-spinners";
 import { projects } from "../constants/index";
 import CTA from "../Components/CTA";
 import { arrow } from "../assets/icons";
+import Footer from "../Components/Footer";
 
 
 const Projects = () => {
@@ -27,7 +28,7 @@ const Projects = () => {
             marginTop: "15VW",
           }}
         >
-          <BarLoader color="#36D7B7" loading={loading} />
+          <BarLoader color="#ff0f7b" loading={loading} />
         </div>
       )}
 
@@ -91,6 +92,8 @@ const Projects = () => {
           <hr className="border-slate-200" />
 
           <CTA />
+          <hr className="border-slate-200" />
+          <Footer />
         </>
       )}
     </section>

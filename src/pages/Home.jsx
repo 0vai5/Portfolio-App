@@ -6,7 +6,8 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import CTA from "../Components/CTA";
+import CTA  from "../Components/CTA";
+import Footer from '../Components/Footer'
 
 
 const Home = () => {
@@ -114,6 +115,8 @@ const Home = () => {
 
           <hr className="border-slate-200" />
           <CTA />
+          <hr className="border-slate-200" />
+          <Footer />
           
         </>
       )}
