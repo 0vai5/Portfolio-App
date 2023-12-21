@@ -6,6 +6,13 @@ import Alert from "../Components/Alert";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
+  const { alert, showAlert, hideAlert } = useAlert();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -13,16 +20,8 @@ const Contact = () => {
       setLoading(false);
     }, 2000);
   }, []);
-  const { alert, showAlert, hideAlert } = useAlert();
-
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
+  
   const formRef = useRef(null);
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -76,8 +75,15 @@ const Contact = () => {
   };
   
 
+  
+  
+
+
+
+  
+
   return (
-    <section className="relative flex lg:flex-row flex-col justify-center h-screen">
+    <section className="relative flex lg:flex-row flex-col max-container justify-center h-[100vh]">
        {alert.show && <Alert {...alert} />}
       {loading ? (
         <div className="text-center flex justify-center items-center">
@@ -90,11 +96,11 @@ const Contact = () => {
           />
         </div>
       ) : (
-        <div className="flex-1 min-w-[50%] flex flex-col pt-16 px-20 ">
+        <div className="flex-1 min-w-[50%] flex flex-col ">
           <h1 className="head-text">Get in Touch</h1>
           <div className="px-15">
             <form
-              className="w-full flex flex-col gap-7 mt-5"
+              className="w-full flex flex-col gap-7 mt-14"
               onSubmit={handleSubmit}
             >
               <label className="text-black-500 font-semibold">
@@ -127,8 +133,6 @@ const Contact = () => {
                 Message
                 <br />
                 <textarea
-                  rows={7}
-                  cols={50}
                   className="textarea"
                   placeholder="What do you want to say?"
                   required
