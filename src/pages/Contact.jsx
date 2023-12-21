@@ -94,7 +94,7 @@ const Contact = () => {
             <div className="flex-1 min-w-[50%] flex flex-col ">
               <h1 className="head-text">Get in Touch</h1>
 
-              <div className="px-15">
+              <div className="px-15" >
                 <form
                   className="w-full flex flex-col gap-7 mt-14"
                   onSubmit={handleSubmit}
@@ -143,9 +143,9 @@ const Contact = () => {
                 </form>
               </div>
             </div>
-            <div>
+            {/* <div>
               <img src="https://th.bing.com/th/id/R.282f4411d07dec117a72f573bd7fc49b?rik=7i3tsCos%2f1w%2bMg&pid=ImgRaw&r=0" alt="" />
-            </div>
+            </div> */}
           </>
         )}
       </section>
