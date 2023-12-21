@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import useAlert from "../hooks/useAlert";
 import Alert from "../Components/Alert";
 
+
 const Contact = () => {
   const [loading, setLoading] = useState(false);
   const { alert, showAlert, hideAlert } = useAlert();
@@ -20,7 +21,7 @@ const Contact = () => {
       setLoading(false);
     }, 2000);
   }, []);
-  
+
   const formRef = useRef(null);
 
   const handleChange = (e) => {
@@ -30,7 +31,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-  
+
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -52,7 +53,7 @@ const Contact = () => {
           text: "Thank you for your message 😃",
           type: "success",
         });
-  
+
         setTimeout(() => {
           hideAlert();
           setForm({
@@ -65,7 +66,7 @@ const Contact = () => {
       .catch((error) => {
         setLoading(false);
         console.error(error);
-  
+
         showAlert({
           show: true,
           text: "I didn't receive your message 😢",
@@ -73,18 +74,10 @@ const Contact = () => {
         });
       });
   };
-  
-
-  
-  
-
-
-
-  
 
   return (
     <section className="relative flex lg:flex-row flex-col max-container justify-center h-[100vh]">
-       {alert.show && <Alert {...alert} />}
+      {alert.show && <Alert {...alert} />}
       {loading ? (
         <div className="text-center flex justify-center items-center">
           <BarLoader
@@ -98,6 +91,7 @@ const Contact = () => {
       ) : (
         <div className="flex-1 min-w-[50%] flex flex-col ">
           <h1 className="head-text">Get in Touch</h1>
+
           <div className="px-15">
             <form
               className="w-full flex flex-col gap-7 mt-14"
@@ -148,6 +142,8 @@ const Contact = () => {
           </div>
         </div>
       )}
+
+      
     </section>
   );
 };
