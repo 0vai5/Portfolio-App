@@ -7,8 +7,9 @@ const Footer = () => {
     <>
       <section className="footer mt-10">
         <div className="footer-container flex justify-center items-center">
-          <p className="text-xl font-bold text-slate-500">
+          <p className="text-xl font-bold text-slate-500 text-center">
             Ovais Raza <span className="blue-gradient_text">© </span>
+            <br />
             all rights reserved
           </p>
           {/* Map through socialLinks and return anchor tags with icons */}
