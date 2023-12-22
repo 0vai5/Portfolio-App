@@ -94,6 +94,35 @@ export const skills = [
         imageUrl: typescript,
         name: "TypeScript",
         type: "Frontend",
+    },
+    {
+        imageUrl: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg',
+        name: 'Bootstrap',
+        type: 'Frontend'
+    },
+    {
+        imageUrl: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg',
+        name: 'Firebase',
+        type: 'Backend/Hosting'
+    },
+    {
+        imageUrl: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg',
+        name: 'Figma'
+    },
+    {
+        imageUrl: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/eslint/eslint-original.svg',
+        name: 'Eslint',
+        type: 'Code Quality'
+    },
+    {
+        imageUrl: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg',
+        name: 'NPM',
+        type: 'Package Manager'
+    },
+    {
+        imageUrl: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg',
+        name: 'Visual Studio Code',
+        type: 'IDE'
     }
 ];
 
@@ -125,11 +154,6 @@ export const experiences = [
 ];
 
 export const socialLinks = [
-    {
-        name: 'Contact',
-        iconUrl: contact,
-        link: '/Contact',
-    },
     {
         name: 'GitHub',
         iconUrl: github,
