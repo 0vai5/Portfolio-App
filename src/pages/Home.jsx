@@ -102,7 +102,7 @@ const Home = () => {
                     <p className="text-black-500 font-medium font-base">
                       {experience.company_name}
                     </p>
-                    <ul className="my-5 list-disc ml-5 space-y-2">
+                    <ul className="my-5 list-disc ml-5 space-y-2 text-slate-500">
                       {experience.points.map((point, idx) => (
                         <li key={idx}>{point}</li>
                       ))}
